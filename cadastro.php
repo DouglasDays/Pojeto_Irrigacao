@@ -17,10 +17,12 @@
 			<form action="formulario_salvar.php" method="post">
 
 				<p><label for="cNome">Usuário: </label>
-				<input type="text" name="tNome" id="cNome"/></p>
+				<input type="text" name="tNome" id="nome"/></p>
 				
 				<p><label for="cPass">Senha: </label>
-				<input type="password" name="tPass" id="cPass"/></p>
+				<input type="password" name="tPass" id="pass"/></p>
+
+				<input type="hidden" name="id">
 				
 				<button type ="submit">SALVAR</button>
 			</form>

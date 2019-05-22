@@ -1,12 +1,13 @@
 <?php
   include "conexao.php";
   
-  $nome  = $_POST['cNome'];
-  $pass  = $_POST['cPass'];
+  $id = $_POST['id'];
+  $nome  = $_POST['nome'];
+  $pass  = $_POST['pass'];
 
    //insercao
    
-  $SQL    = "INSERT INTO user (nome, senha) VALUES  ('$nome','$pass')";
+  $SQL    = "INSERT INTO user (_id, nome, senha) VALUES  ('_id','$nome','$pass')";
          
   $st = $conexao->prepare($SQL);
 
