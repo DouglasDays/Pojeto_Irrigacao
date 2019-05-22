@@ -6,7 +6,7 @@
 
    //insercao
    
-  $SQL    = "INSERT INTO user (nome, senha) VALUES ($nome','$pass')";
+  $SQL    = "INSERT INTO user (nome, senha) VALUES ('$nome','$pass')";
          
   $st = $conexao->prepare($SQL);
 

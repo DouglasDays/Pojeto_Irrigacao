@@ -21,8 +21,6 @@
 				
 				<p><label for="cPass">Senha: </label>
 				<input type="password" name="tPass" id="pass"/></p>
-
-				<input type="hidden" name="id">
 				
 				<button type ="submit">SALVAR</button>
 			</form>
