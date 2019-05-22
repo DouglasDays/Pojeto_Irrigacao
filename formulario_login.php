@@ -9,8 +9,13 @@
 	$st = $conexao->prepare($SQL);
 
 	if ($st->execute()) {
-		echo "Campos encontrados!";
+		if ($st->rowCount() > 0) {
+			echo "Bem Vindo ".$nome."!";
+		} else {
+			echo "Usuário inválido!";
+		}
+		
 	} else {
-		echo "Usuário inválido!";
+		echo "Falha ao executar query!";
 	}
 ?>
