@@ -1,8 +1,8 @@
 <?php
   include "conexao.php";
   
-  $nome  = $_POST['tNome'];
-  $pass  = $_POST['tPass'];
+  $nome  = $_POST['cNome'];
+  $pass  = $_POST['cPass'];
 
    //insercao
    
