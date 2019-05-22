@@ -23,6 +23,7 @@
 				<input type="password" name="tPass" id="pass"/></p>
 				
 				<button type ="submit">SALVAR</button>
+				<button id=voltar><a href="index.php">VOLTAR</a></button>
 			</form>
 		</section>
 
