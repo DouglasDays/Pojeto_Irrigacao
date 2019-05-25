@@ -4,6 +4,8 @@
 	<meta charset="UTF-8"/>
 	<title>Irrigação Automatizada</title>
 	<link rel="stylesheet" href="stilo.css">
+	<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src=""></script>
 </head>
 
 <body>
@@ -16,7 +18,7 @@
 
 			<div id="resultado"><p>Resultado aqui...</p></div>
 
-			<form method="post" action="formulario_login.php" id="fCad">
+			<form method="post" action="formulario_login.php">
 
 				<p><label for="cNome">Usuário: </label>
 				<input type="text" name="tNome" id="nome" placeholder="Digite o seu nome!"></p>
