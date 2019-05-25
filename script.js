@@ -7,5 +7,4 @@ $("form").submit(function(event){
 	};
 	xmlHttp.open("POST", "formulario_login.php", true);
 	xmlHttp.send();
-	event.preventDefault();
 });
