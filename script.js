@@ -13,6 +13,7 @@ $("form").submit(function(event){
 		url:'formulario_login.php',
 		success: function(dados){
 			$("#resultado").append(dados);
+			event.preventDefault();
 		}
 	});
 });
