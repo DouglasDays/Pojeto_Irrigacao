@@ -35,32 +35,5 @@
 			<p>Copyright &copy; 2019 - by Douglas Dias<br/>
 		</footer>
 	</div>
-
-	<script type="text/javascript">
-		$("form").submit(function(event){
-			alert("funciona!");
-			//Pega as varáveis
-			var vNome = $("#nome").val();
-			var vSenha = $("#senha").val();
-
-			//Criando as varáveis
-			var vUrl = "formulario_login.php";
-			var vData = {nome:vNome, senha:vSenha};
-
-			$.post({
-				vUrl,
-				vData,
-				function(response,status){
-					if (status == "success") {
-						//Pegando dados do json
-						var obj = JQuery.parseJSON(response);
-
-						$("#resultado").html(obj);
-						event.preventDefault();
-					}
-				}
-			});
-		});
-	</script>
 </body>
 </html>
