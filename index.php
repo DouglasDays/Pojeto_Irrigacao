@@ -5,7 +5,7 @@
 	<title>Irrigação Automatizada</title>
 	<link rel="stylesheet" href="stilo.css">
 	<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
-	<script type="text/javascript" src="script.js"></script>
+	<script type="text/javascript" src="indexScript.js"></script>
 </head>
 
 <body>
