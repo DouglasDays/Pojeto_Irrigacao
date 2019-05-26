@@ -9,7 +9,7 @@ $("form").submit(function(event){
 	xmlHttp.send();*/
 	$.ajax({
 		type:'post',
-		dataType:'responseText',
+		dataType:'html',
 		url:'formulario_login.php',
 		success: function(dados){
 			$("#resultado").append(dados);

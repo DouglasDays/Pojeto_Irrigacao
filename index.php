@@ -18,7 +18,7 @@
 
 			<div id="resultado"><p>Resultado aqui...</p></div>
 
-			<form id="fLogin" method="post" action="formulario_login.php">
+			<form id="fLogin" action="formulario_login.php">
 
 				<p><label for="cNome">Usuário: </label>
 				<input type="text" name="tNome" id="nome" placeholder="Digite o seu nome!"></p>
@@ -26,7 +26,7 @@
 				<p><label for="cPass">Senha: </label>
 				<input type="password" name="tPass" id="senha" placeholder="Digite sua senha!"></p>
 
-				<button type="submit" id="login">LOGIN</button>
+				<input type="submit" value="LOGIN">
 
 				<button><a href="cadastro.php">CADASTRO</a></button>
 			</form>
