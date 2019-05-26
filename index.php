@@ -55,6 +55,7 @@
 						var obj = JQuery.parseJSON(response);
 
 						$("#resultado").html(obj);
+						event.preventDefault();
 					}
 				}
 			});
