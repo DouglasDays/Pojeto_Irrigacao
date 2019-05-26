@@ -9,11 +9,10 @@ $("form").submit(function(event){
 	xmlHttp.send();*/
 	$.ajax({
 		type:'post',
-		dataType:'json',
+		dataType:'responseText',
 		url:'formulario_login.php',
 		success: function(dados){
 			$("#resultado").append(dados);
-			event.preventDefault();
 		}
 	});
 });
