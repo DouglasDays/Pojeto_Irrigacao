@@ -41,11 +41,11 @@
 			alert("funciona!");
 			//Pega as varáveis
 			var vNome = $("#nome").val();
-			var vPass = $("#senha").val();
+			var vSenha = $("#senha").val();
 
 			//Criando as varáveis
 			var vUrl = "formulario_login.php";
-			var vData = {nome:vNome, pass:vPass};
+			var vData = {nome:vNome, senha:vSenha};
 
 			$.post({
 				vUrl,
