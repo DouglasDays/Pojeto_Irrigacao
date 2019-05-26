@@ -38,6 +38,7 @@
 
 	<script type="text/javascript">
 		$("form").submit(function(event){
+			alert("funciona!");
 			//Pega as varáveis
 			var vNome = $("#nome").val();
 			var vPass = $("#senha").val();
