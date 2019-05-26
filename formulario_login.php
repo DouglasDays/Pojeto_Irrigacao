@@ -2,8 +2,8 @@
 	include 'conexao.php';
 
 	#Pega os valores do inputs
-	$nome = $_POST["nome"];
-	$senha = $_POST["senha"];
+	$nome = $_POST["tNome"];
+	$senha = $_POST["tSenha"];
 
 	#Executa uma query com base nos valores da variáveis
 	$SQL = "SELECT nome, senha FROM user WHERE nome='$nome' AND senha='$senha'";
