@@ -1,4 +1,4 @@
-$("form").submit(function (event) {
+$("#fLogin").submit(function(event) {
 	alert("funcionando!");
 	event.preventDefault();
 });
