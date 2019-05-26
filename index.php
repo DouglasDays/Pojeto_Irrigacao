@@ -36,5 +36,11 @@
 			<p>Copyright &copy; 2019 - by Douglas Dias<br/>
 		</footer>
 	</div>
+	<script type="text/javascript">
+		$("#fLogin").submit(function(event) {
+			alert("funcionando!");
+			event.preventDefault();
+		});
+	</script>
 </body>
 </html>
