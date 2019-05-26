@@ -2,8 +2,8 @@
 	include 'conexao.php';
 
 	#Pega os valores do inputs
-	$nome = $_POST['tNome'];
-	$senha = $_POST['tPass'];
+	$nome = $_POST['nome'];
+	$senha = $_POST['pass'];
 
 	#Executa uma query com base nos valores da variáveis
 	$SQL = "SELECT nome, senha FROM user WHERE nome='$nome' AND senha='$senha'";
@@ -14,12 +14,12 @@
 	if ($st->execute()) {
 		#Se query retornar um resultado, mostra usuário
 		if ($st->rowCount() > 0) {
-			echo "Bem Vindo ".$nome."!";
+			echo json_encode("Bem Vindo ".$nome."!");
 		} else {
-			echo "Usuário inválido!";
+			echo json_encode("Usuário inválido!");
 		}
 		
 	} else {
-		echo "Falha ao executar query!";
+		echo json_encode("Falha ao executar query!");
 	}
 ?>

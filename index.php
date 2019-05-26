@@ -5,7 +5,6 @@
 	<title>Irrigação Automatizada</title>
 	<link rel="stylesheet" href="stilo.css">
 	<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
-	<script type="text/javascript" src="indexScript.js"></script>
 </head>
 
 <body>
@@ -18,7 +17,7 @@
 
 			<div id="resultado"><p>Resultado aqui...</p></div>
 
-			<form id="fLogin" action="formulario_login.php">
+			<form method="post" action="formulario_login.php">
 
 				<p><label for="cNome">Usuário: </label>
 				<input type="text" name="tNome" id="nome" placeholder="Digite o seu nome!"></p>
@@ -36,22 +35,27 @@
 			<p>Copyright &copy; 2019 - by Douglas Dias<br/>
 		</footer>
 	</div>
+
 	<script type="text/javascript">
 		$("form").submit(function(event){
-			/*var xmlHttp = new XMLHttpRequest();
-			xmlHttp.onreadystatechange = function() {
-				if(xmlHttp.readyState===4 && xmlHttp.status===200) {
-					document.getElementById("resultado").innerHTML = xmlHttp.responseText;
-				}
-			};
-			xmlHttp.open("POST", "formulario_login.php", true);
-			xmlHttp.send();*/
-			$.ajax({
-				type:'post',
-				dataType:'html',
-				url:'formulario_login.php',
-				success: function(dados){
-					$("#resultado").append(dados);
+			//Pega as varáveis
+			var vNome = $("#nome").val();
+			var vPass = $("#senha").val();
+
+			//Criando as varáveis
+			var vUrl = "formulario_login.php";
+			var vData = {nome:vNome, pass:vPass};
+
+			$.post({
+				vUrl,
+				vData,
+				function(response,status){
+					if (status == "success") {
+						//Pegando dados do json
+						var obj = JQuery.parseJSON(response);
+
+						$("#resultado").html(obj);
+					}
 				}
 			});
 		});
