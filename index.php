@@ -48,21 +48,25 @@
 			var vData = {nome:vNome, senha:vPass};
 
 			$.ajax({
-				vUrl,
-				vData,
-				function(response,status){
-					if (status == "success") {
-						alert("Funciona!");
+				url: vUrl,
+				type: "POST",
+				dataType: "json",
+				data: vData,
+				beforeSend: function() {
+					$("#resultado").html("VERIFICANDO...");
+				}
+			})
+			.done(function(msg) {
+				alert("Funciona!");
 
-						//Pegando dados do json
-						var obj = JQuery.parseJSON(response);
+				//Pegando dados do json
+				var obj = JQuery.parseJSON(msg);
 
-						$("#resultado").html(obj);
-						event.preventDefault();
-					} else if(status == "error") {
-						alert("Não Funciona!");
-					}
-				},
+				$("#resultado").html(obj);
+				event.preventDefault();
+			})
+			.fail(function(jqXHR, textStatus, msg) {
+				alert(msg);
 			});
 		});
 	</script>
