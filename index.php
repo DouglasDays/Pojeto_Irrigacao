@@ -53,7 +53,7 @@
 			})
 			.done(function(msg){
 				$("#resultado").html(msg);
-				var status = true;
+				status = true;
 			})
 			.fail(function(jqXHR, textStatus, msg){
 				alert(msg);
