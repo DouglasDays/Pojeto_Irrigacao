@@ -1,6 +1,6 @@
 $("form").submit(function(event){
 	$.ajax({
-		url: "formulario_login.php"
+		url: "formulario_login.php",
 		type: 'post',
 		data: {
 			nome: $("#nome").val(),
@@ -15,7 +15,7 @@ $("form").submit(function(event){
 	})
 	.fail(function(jqXHR, textStatus, msg){
 		alert(msg);
-	})
+	});
 
 	event.preventDefault();
 });
