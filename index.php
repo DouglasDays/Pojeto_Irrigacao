@@ -51,15 +51,19 @@
 			})
 			.done(function(msg){
 				$("#resultado").html(msg);
-				setTimeout(function() {
-					window.location = "medicoes.php";
-				}, 3000);
+				var status = true;
 			})
 			.fail(function(jqXHR, textStatus, msg){
 				alert(msg);
 			});
 
 			event.preventDefault();
+
+			if (status) {
+				setTimeout(function() {
+					window.location = "medicoes.php";
+				}, 3000);
+			}
 		});
 	</script>
 </body>
