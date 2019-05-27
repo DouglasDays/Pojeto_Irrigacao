@@ -1,6 +1,5 @@
 $("form").submit(function(event){
 
-	alert("Funciona!");
 	//Pega as varáveis
 	var vNome = $("#nome").val();
 	var vPass = $("#senha").val();
@@ -14,6 +13,8 @@ $("form").submit(function(event){
 		vData,
 		function(response,status){
 			if (status == "success") {
+				alert("Funciona!");
+				
 				//Pegando dados do json
 				var obj = JQuery.parseJSON(response);
 
