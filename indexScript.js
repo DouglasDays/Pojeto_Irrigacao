@@ -1,4 +1,5 @@
 $("form").submit(function(event){
+	
 	$.ajax({
 		url: "formulario_login.php",
 		type: 'post',
