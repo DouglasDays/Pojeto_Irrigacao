@@ -14,9 +14,9 @@
 
   #executa a inserção
   if ($st->execute()) {
-  echo "Cadastro realizado com sucesso!";
+    echo "Cadastro realizado com sucesso!";
   }else {
-  echo "insert_error";
+    echo "insert_error";
   }
       
   //header("Location: index.php"); // redireciona para a home  
