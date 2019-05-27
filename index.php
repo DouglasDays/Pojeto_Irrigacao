@@ -5,7 +5,6 @@
 	<title>Irrigação Automatizada</title>
 	<link rel="stylesheet" href="stilo.css">
 	<script src="jquery-3.3.1.min.js"></script>
-	<script src="indexScript.js"></script>
 </head>
 
 <body>
@@ -18,7 +17,7 @@
 
 			<div id="resultado"><p></p></div>
 
-			<form method="post" action="formulario_login.php">
+			<form>
 
 				<p><label for="cNome">Usuário: </label>
 				<input type="text" name="nome" id="nome" placeholder="Digite o seu nome!"></p>
@@ -36,5 +35,7 @@
 			<p>Copyright &copy; 2019 - by Douglas Dias<br/>
 		</footer>
 	</div>
+
+	<script src="indexScript.js"></script>
 </body>
 </html>
