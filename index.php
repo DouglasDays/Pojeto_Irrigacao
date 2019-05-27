@@ -47,7 +47,7 @@
 			var vUrl = "formulario_login.php";
 			var vData = {nome:vNome, senha:vPass};
 
-			$.post({
+			$.ajax({
 				vUrl,
 				vData,
 				function(response,status){
@@ -59,10 +59,10 @@
 
 						$("#resultado").html(obj);
 						event.preventDefault();
-					} else {
+					} else if(status == "error") {
 						alert("Não Funciona!");
 					}
-				}
+				},
 			});
 		});
 	</script>
