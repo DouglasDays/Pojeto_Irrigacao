@@ -51,7 +51,7 @@
 			})
 			.done(function(msg){
 				$("#resultado").html(msg);
-				setTimeOut(function() {
+				setTimeout(function() {
 					window.location = "medicoes.php";
 				}, 3000);
 			})
