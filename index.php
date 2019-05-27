@@ -4,7 +4,8 @@
 	<meta charset="UTF-8"/>
 	<title>Irrigação Automatizada</title>
 	<link rel="stylesheet" href="stilo.css">
-	<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+	<script src="jquery-3.3.1.min.js"></script>
+	<script src="indexScript.js"></script>
 </head>
 
 <body>
@@ -20,10 +21,10 @@
 			<form method="post" action="formulario_login.php">
 
 				<p><label for="cNome">Usuário: </label>
-				<input type="text" name="tNome" id="nome" placeholder="Digite o seu nome!"></p>
+				<input type="text" name="nome" id="nome" placeholder="Digite o seu nome!"></p>
 
 				<p><label for="cPass">Senha: </label>
-				<input type="password" name="tSenha" id="senha" placeholder="Digite sua senha!"></p>
+				<input type="password" name="senha" id="senha" placeholder="Digite sua senha!"></p>
 
 				<input type="submit" value="LOGIN">
 
