@@ -49,9 +49,6 @@
 			})
 			.done(function(msg){
 				$("#resultado").html(msg);
-				setTimeOut(function() {
-					window.location = "medicoes.php";
-				}, 3000);
 			})
 			.fail(function(jqXHR, textStatus, msg){
 				alert(msg);
