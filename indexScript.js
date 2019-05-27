@@ -14,12 +14,14 @@ $("form").submit(function(event){
 		function(response,status){
 			if (status == "success") {
 				alert("Funciona!");
-				
+
 				//Pegando dados do json
 				var obj = JQuery.parseJSON(response);
 
 				$("#resultado").html(obj);
 				event.preventDefault();
+			} else {
+				alert("Não Funciona!");
 			}
 		}
 	});
