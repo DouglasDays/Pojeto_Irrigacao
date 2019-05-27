@@ -5,6 +5,7 @@
 	<title>Irrigação Automatizada</title>
 	<link rel="stylesheet" href="stilo.css">
 	<script src="jquery-3.3.1.min.js"></script>
+	<script src="indexScript.js"></script>
 </head>
 
 <body>
@@ -15,7 +16,7 @@
 		</header>
 		<section id="corpo">
 
-			<div id="resultado"><p>Resultado aqui...</p></div>
+			<div id="resultado"><p></p></div>
 
 			<form method="post" action="formulario_login.php">
 
@@ -35,40 +36,5 @@
 			<p>Copyright &copy; 2019 - by Douglas Dias<br/>
 		</footer>
 	</div>
-
-	<script>
-		$("form").submit(function(event){
-
-			//Pega as varáveis
-			var vNome = $("#nome").val();
-			var vPass = $("#senha").val();
-
-			//Criando as varáveis
-			var vUrl = "formulario_login.php";
-			var vData = {nome:vNome, senha:vPass};
-
-			$.ajax({
-				url: vUrl,
-				type: "POST",
-				dataType: "json",
-				data: vData,
-				beforeSend: function() {
-					$("#resultado").html("VERIFICANDO...");
-				}
-			})
-			.done(function(msg) {
-				alert("Funciona!");
-
-				//Pegando dados do json
-				var obj = JQuery.parseJSON(msg);
-
-				$("#resultado").html(obj);
-				event.preventDefault();
-			})
-			.fail(function(jqXHR, textStatus, msg) {
-				alert(msg);
-			});
-		});
-	</script>
 </body>
 </html>

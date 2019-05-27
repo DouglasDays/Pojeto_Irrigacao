@@ -14,12 +14,12 @@
 	if ($st->execute()) {
 		#Se query retornar um resultado, mostra usuário
 		if ($st->rowCount() > 0) {
-			echo json_encode("Bem Vindo ".$nome."!");
+			echo "Bem Vindo ".$nome."!";
 		} else {
-			echo json_encode("Usuário inválido!");
+			echo "Usuário inválido!";
 		}
 		
 	} else {
-		echo json_encode("Falha ao executar query!");
+		echo "Falha ao executar query!";
 	}
 ?>
