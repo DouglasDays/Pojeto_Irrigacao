@@ -5,30 +5,6 @@
 	<title>Irrigação Automatizada</title>
 	<link rel="stylesheet" href="stilo.css">
 	<script src="jquery-3.3.1.min.js"></script>
-	<script>
-		$("form").submit(function(event){
-	
-			$.ajax({
-				url: "formulario_login.php",
-				type: 'post',
-				data: {
-					nome: $("#nome").val(),
-					senha: $("#senha").val()
-				},
-				beforeSend: function() {
-					$("#resultado").html("Verificando...");
-				}
-			})
-			.done(function(msg){
-				$("#resultado").html(msg);
-			})
-			.fail(function(jqXHR, textStatus, msg){
-				alert(msg);
-			});
-
-			event.preventDefault();
-		});
-	</script>
 </head>
 
 <body>
@@ -58,5 +34,30 @@
 			<p>Copyright &copy; 2019 - by Douglas Dias<br/>
 		</footer>
 	</div>
+
+	<script>
+		$("form").submit(function(event){
+	
+			$.ajax({
+				url: "formulario_login.php",
+				type: 'post',
+				data: {
+					nome: $("#nome").val(),
+					senha: $("#senha").val()
+				},
+				beforeSend: function() {
+					$("#resultado").html("Verificando...");
+				}
+			})
+			.done(function(msg){
+				$("#resultado").html(msg);
+			})
+			.fail(function(jqXHR, textStatus, msg){
+				alert(msg);
+			});
+
+			event.preventDefault();
+		});
+	</script>
 </body>
 </html>
