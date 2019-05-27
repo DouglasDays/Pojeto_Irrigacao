@@ -37,6 +37,8 @@
 
 	<script>
 		$("form").submit(function(event){
+
+			var status = false;
 	
 			$.ajax({
 				url: "formulario_login.php",
