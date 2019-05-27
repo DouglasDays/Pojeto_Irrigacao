@@ -5,7 +5,6 @@
 	<title>Irrigação Automatizada</title>
 	<link rel="stylesheet" href="stilo.css">
 	<script src="jquery-3.3.1.min.js"></script>
-	<script src="indexScript.js"></script>
 </head>
 
 <body>
@@ -36,5 +35,7 @@
 			<p>Copyright &copy; 2019 - by Douglas Dias<br/>
 		</footer>
 	</div>
+
+	<script src="indexScript.js"></script>
 </body>
 </html>
