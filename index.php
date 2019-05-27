@@ -38,8 +38,6 @@
 	<script>
 		$("form").submit(function(event){
 
-			var status = false;
-	
 			$.ajax({
 				url: "formulario_login.php",
 				type: 'post',
@@ -53,19 +51,15 @@
 			})
 			.done(function(msg){
 				$("#resultado").html(msg);
-				status = true;
+				setTimeout(function() {
+					window.location = "medicoes.php";
+				}, 3000);
 			})
 			.fail(function(jqXHR, textStatus, msg){
 				alert(msg);
 			});
 
 			event.preventDefault();
-
-			if (status) {
-				setTimeout(function() {
-					window.location = "medicoes.php";
-				}, 3000);
-			}
 		});
 	</script>
 </body>
