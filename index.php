@@ -18,10 +18,10 @@
 			<div id="resultado"><p></p></div>
 
 			<form>
-				<p><label for="cNome">Usuário: </label>
+				<p><label for="nome">Usuário: </label>
 				<input type="text" name="nome" id="nome" placeholder="Digite o seu nome!"></p>
 
-				<p><label for="cPass">Senha: </label>
+				<p><label for="nome">Senha: </label>
 				<input type="password" name="senha" id="senha" placeholder="Digite sua senha!"></p>
 
 				<input type="submit" value="LOGIN">

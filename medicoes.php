@@ -13,7 +13,7 @@
 		<div id="var2"><p>var2</p></div>
 
 		<label for="var3">var3</label>
-		<div id="var3"><p>var3</p></div>
+		<div name="var3" id="var3"><p>var3</p></div>
 	</div>
 </body>
 </html>
