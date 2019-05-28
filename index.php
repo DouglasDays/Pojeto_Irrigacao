@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8"/>
 	<title>Irrigação Automatizada</title>
-	<link rel="stylesheet" href="stilo.css">
+	<link rel="stylesheet" href="stiloIndex.css">
 	<script src="jquery-3.3.1.min.js"></script>
 </head>
 
