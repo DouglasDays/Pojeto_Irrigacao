@@ -18,6 +18,22 @@ div#interface p, a {
 	color: #000;
 }
 
+
+header#cabecalho img#icone {
+	/* Tamanho que imagem ocupa na tela */
+	position: relative;
+	width: 30%;
+	height: 30%;
+	margin: 10px auto auto 320px;
+}
+
+header#cabecalho h1 {
+	font-family: 'Agency FB', sans-serif;
+	font-size: 40pt;
+	color: rgb(35, 51, 35);
+	padding-left: 350px;
+}
+
 section#corpo {
 	padding-bottom: 10px;
 }
