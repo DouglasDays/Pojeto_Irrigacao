@@ -11,7 +11,7 @@ div#interface {
 	box-shadow: 0px 0px 10px rgba(0, 0, 0, .5);
 	padding: 10px;
 	font-size: 16pt;
-	background: url("logo_irr1.png") no-repeat 95% 95%;
+	/*background: url("logo_irr1.png") no-repeat 95% 95%;*/
 }
 
 div#interface p, a {
