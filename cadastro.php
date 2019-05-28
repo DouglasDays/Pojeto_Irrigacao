@@ -29,7 +29,7 @@
 		</section>
 
 		<footer id="rodape">
-			<p>Copyright &copy; 2019 - by Douglas Dias<br/>
+			<p>Copyright &copy; 2019 - by Douglas Dias</p>
 		</footer>
 	</div>
 

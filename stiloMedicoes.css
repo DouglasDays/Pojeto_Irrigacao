@@ -12,3 +12,20 @@ div#interface {
 	padding: 10px;
 	font-size: 16pt;
 }
+
+div#interface p, a {
+	text-decoration: none;
+	color: #000;
+}
+
+section#corpo {
+	padding-bottom: 10px;
+}
+
+footer#rodape {
+	border-top: 1px #606060 solid;
+}
+
+footer#rodape p {
+	text-align: center;
+}
