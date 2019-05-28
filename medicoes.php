@@ -3,7 +3,7 @@
 <head>
 	<title>Medições</title>
 	<meta charset="utf-8"/>
-	<link href="stiloMedicoes.css">
+	<link rel="stylesheet" type="text/css" href="stiloMedicoes.css">
 </head>
 <body>
 	<div id="interface">
