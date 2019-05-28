@@ -8,7 +8,8 @@
 <body>
 	<div id="interface">
 		<header id="cabecalho">
-			
+			<img id="icone" src="logo_irr1.png"/>
+			<h1>Bem Vindo!</h1>
 		</header>
 
 		<section id="corpo">
