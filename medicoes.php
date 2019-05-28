@@ -23,7 +23,7 @@
 		<div name="var3" id="var3"><p>var3</p></div>
 		</section>
 
-		<footer>
+		<footer id="rodape">
 			<p>Copyright &copy; 2019 - by Douglas Dias</p>
 		</footer>
 	</div>
