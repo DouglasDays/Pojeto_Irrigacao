@@ -25,7 +25,7 @@
 					}
 				},
 				error: function() {
-					$("#resultado").html("Ocorreu um erro ao carregar medições!");
+					$("#resultado").html("Ocorreu um erro ao carregar!");
 				}
 
 			});
