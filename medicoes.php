@@ -16,8 +16,8 @@
 				type: "POST",
 				dataType: 'json',
 				cache: false,
-				success: function(dataserver) {
-					if (dataserver.result) {
+				success: function(dataServer) {
+					if (dataServer.result) {
 						$("#lmp").html(dataserver.lpm);
 						$("#mpm").html(dataserver.mpm);
 					} else {
