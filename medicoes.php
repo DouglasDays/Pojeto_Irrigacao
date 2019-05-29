@@ -41,19 +41,21 @@
 				type: "POST",
 				dataType: "json",
 				cache: false,
-				success: function(dataServer) {
-					if (dataServer.result) {
-						$("#lmp").html(dataServer.lpm);
-						$("#mpm").html(dataServer.mpm);
-					} else {
-						$("#resultado").html("Ocorreu um erro ao carregar medições!");
-					}
-				},
-				error: function() {
-					$("#resultado").html("Ocorreu um erro ao carregar!");
+				beforeSend: function() {
+					$("#resultado").html("Buscando dados...");
 				}
-
-			});
+			})
+			.done(function(dataServer){
+				if (dataServer.result) {
+					$("#lmp").html(dataServer.lpm);
+					$("#mpm").html(dataServer.mpm);
+				} else {
+					$("#resultado").html("Ocorreu um erro ao carregar medições!");
+				}
+			})
+			.fail(function(){
+				$("#resultado").html("Ocorreu um erro ao tentar consultar medições!");
+			})
 		}
 	</script>
 </body>
