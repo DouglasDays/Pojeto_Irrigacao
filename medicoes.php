@@ -5,32 +5,6 @@
 	<meta charset="utf-8"/>
 	<link rel="stylesheet" type="text/css" href="stiloMedicoes.css">
 	<script src="jquery-3.3.1.min.js"></script>
-	<script type="text/javascript">
-		$(document).ready(function() {
-			var interval = setInterval(carregaMedicoes, 1000);
-		});
-
-		function carregaMedicoes() {
-			$.ajax({
-				url: "retorna_medicao.php",
-				type: "POST",
-				dataType: 'json',
-				cache: false,
-				success: function(dataServer) {
-					if (dataServer.result) {
-						$("#lmp").html(dataServer.lpm);
-						$("#mpm").html(dataServer.mpm);
-					} else {
-						$("#resultado").html("Ocorreu um erro ao carregar medições!");
-					}
-				},
-				error: function() {
-					$("#resultado").html("Ocorreu um erro ao carregar!");
-				}
-
-			});
-		}
-	</script>
 </head>
 <body>
 	<div id="interface">
@@ -55,5 +29,32 @@
 			<p>Copyright &copy; 2019 - by Douglas Dias</p>
 		</footer>
 	</div>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			var intervalo = setInterval(carregaMedicoes, 1000);
+		});
+
+		function carregaMedicoes() {
+			$.ajax({
+				url: "retorna_medicao.php",
+				type: "POST",
+				dataType: "json",
+				cache: false,
+				success: function(dataServer) {
+					if (dataServer.result) {
+						$("#lmp").html(dataServer.lpm);
+						$("#mpm").html(dataServer.mpm);
+					} else {
+						$("#resultado").html("Ocorreu um erro ao carregar medições!");
+					}
+				},
+				error: function() {
+					$("#resultado").html("Ocorreu um erro ao carregar!");
+				}
+
+			});
+		}
+	</script>
 </body>
 </html>
