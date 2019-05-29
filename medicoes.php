@@ -18,8 +18,8 @@
 				cache: false,
 				success: function(dataServer) {
 					if (dataServer.result) {
-						$("#lmp").html(dataserver.lpm);
-						$("#mpm").html(dataserver.mpm);
+						$("#lmp").html(dataServer.lpm);
+						$("#mpm").html(dataServer.mpm);
 					} else {
 						$("#resultado").html("Ocorreu um erro ao carregar medições!");
 					}
