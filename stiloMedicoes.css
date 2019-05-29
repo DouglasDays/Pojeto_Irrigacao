@@ -19,6 +19,11 @@ div#interface p, a {
 	color: #000;
 }
 
+div#resultado {
+	width: 100%;
+	text-align: center;
+}
+
 
 header#cabecalho img#icone {
 	/* Tamanho que imagem ocupa na tela */

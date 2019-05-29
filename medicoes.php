@@ -4,6 +4,33 @@
 	<title>Medições</title>
 	<meta charset="utf-8"/>
 	<link rel="stylesheet" type="text/css" href="stiloMedicoes.css">
+	<script src="jquery-3.3.1.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			var interval = setInterval(carregaMedicoes, 1000);
+		});
+
+		function carregaMedicoes() {
+			$.ajax({
+				url: "retorna_medicao.php",
+				type: "POST",
+				dataType: 'json',
+				cache: false,
+				success: function(dataserver) {
+					if (dataserver.result) {
+						$("#lmp").html(dataserver.lpm);
+						$("#mpm").html(dataserver.mpm);
+					} else {
+						$("#resultado").html("Ocorreu um erro ao carregar medições!");
+					}
+				},
+				error: function() {
+					$("#resultado").html("Ocorreu um erro ao carregar medições!");
+				}
+
+			});
+		}
+	</script>
 </head>
 <body>
 	<div id="interface">
@@ -13,15 +40,14 @@
 		</header>
 
 		<section id="corpo">
+			<div id="resultado"></div>
+
 			<fieldset id="retorno">
-				<label for="var1">var1:</label>
-				<div id="var1"><p>var1</p></div>
+				<label for="lpm">Litros por Minuto:</label>
+				<div id="lpm"><p></p></div>
 
-				<label for="var2">var2:</label>
-				<div id="var2"><p>var2</p></div>
-
-				<label for="var3">var3:</label>
-				<div name="var3" id="var3"><p>var3</p></div>
+				<label for="mpm">Média por Minuto:</label>
+				<div id="mpm"><p></p></div>
 			</fieldset>
 		</section>
 

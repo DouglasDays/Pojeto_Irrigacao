@@ -4,7 +4,7 @@
   #*Fazer verificação de nome...
       
   #Pega os valores do inputs
-  $nome  = $_POST['senha'];
+  $nome  = $_POST['nome'];
   $pass  = $_POST['senha'];
 
   #Insere os dados com base nos valores da variáveis     
