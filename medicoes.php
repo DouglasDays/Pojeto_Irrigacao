@@ -54,7 +54,7 @@
 				}
 			})
 			.fail(function(jqXHR, textStatus, msg){
-				aler(msg);
+				alert(msg);
 			});
 		}
 	</script>
