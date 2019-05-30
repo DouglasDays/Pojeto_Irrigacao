@@ -2,7 +2,7 @@
 	include 'conexao.php';
 
 	//Define query que busca dados pelo _id e sendo o ultimo registro
-	$SQL = "SELECT * FROM medicao ORDER BY _id DESC LIMIT -1";
+	$SQL = "SELECT * FROM medicao ORDER BY _id DESC LIMIT 1";
 
 	//Prepara a query para ser executada
 	$st = $conexao->prepare($SQL);
@@ -16,7 +16,7 @@
 
 				$retorno['result'] = true;
 			}
-		} else $retorno['result'] = false
+		} else $retorno['result'] = false;
 
 		echo json_encode($retorno);
 	} else {
