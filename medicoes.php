@@ -39,8 +39,6 @@
 			$.ajax({
 				url: "retorna_medicao.php",
 				type: "POST",
-				dataType: "json",
-				cache: false,
 				beforeSend: function() {
 					$("#resultado").html("Buscando dados...");
 				}
