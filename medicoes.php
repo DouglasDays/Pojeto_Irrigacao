@@ -17,6 +17,7 @@
 			<div id="resultado"></div>
 
 			<fieldset id="retorno">
+				<div id="_id"><p></p></div>
 				<label for="lpm">Litros por Minuto:</label>
 				<div id="lpm"><p></p></div>
 
@@ -47,6 +48,7 @@
 			})
 			.done(function(dataServer){
 				if (dataServer.result) {
+					$("_id").html(dataServer.id);
 					$("#lmp").html(dataServer.lpm);
 					$("#mpm").html(dataServer.mpm);
 				} else {
