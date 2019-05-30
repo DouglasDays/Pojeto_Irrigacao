@@ -48,7 +48,7 @@
 			})
 			.done(function(dataServer){
 				if (dataServer.result) {
-					$("_id").html(dataServer.id);
+					$("#_id").html(dataServer.id);
 					$("#lmp").html(dataServer.lpm);
 					$("#mpm").html(dataServer.mpm);
 				} else {
