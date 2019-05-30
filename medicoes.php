@@ -54,7 +54,7 @@
 				}
 			})
 			.fail(function(jqXHR, textStatus, msg){
-				$("#resultado").html(msg);
+				aler(msg);
 			});
 		}
 	</script>
