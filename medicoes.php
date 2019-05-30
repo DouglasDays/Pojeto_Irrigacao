@@ -53,8 +53,8 @@
 					$("#resultado").html("Ocorreu um erro ao carregar medições!");
 				}
 			})
-			.fail(function(jqXHR, textStatus, msg){
-				$("#resultado").html(msg);
+			.fail(function(){
+				$("#resultado").html("Ocorreu um erro ao tentar consultar medições!");
 			})
 		}
 	</script>
