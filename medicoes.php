@@ -3,7 +3,7 @@
 <head>
 	<title>Medições</title>
 	<meta charset="utf-8"/>
-	<link rel="stylesheet" type="text/css" href="stiloMedicoes.css">
+	<link rel="stylesheet" type="text/css" href="stiloIndex.css">
 	<script src="jquery-3.3.1.min.js"></script>
 </head>
 <body>
