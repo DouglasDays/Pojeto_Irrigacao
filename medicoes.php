@@ -18,8 +18,8 @@
 
 			<fieldset id="retorno">
 				<div id="_id"><p></p></div>
-				<label for="lpm">Litros por Minuto:</label>
-				<div id="lpm"><p></p></div>
+				<label for="vu">Litros por Minuto:</label>
+				<div id="vu"><p></p></div>
 
 				<label for="mpm">Média por Minuto:</label>
 				<div id="mpm"><p></p></div>
@@ -49,7 +49,7 @@
 			.done(function(dataServer){
 				if (dataServer.result) {
 					$("#_id").html(dataServer.id);
-					$("#lmp").html(dataServer.lpm);
+					$("#vu").html(dataServer.vu);
 					$("#mpm").html(dataServer.mpm);
 				} else {
 					$("#resultado").html("Ocorreu um erro ao carregar medições!");

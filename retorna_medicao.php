@@ -12,7 +12,7 @@
 		if ($st->rowCount() > 0) { //Se der erro verificar esta linha!
 			while ($data = $st->fetch(PDO::FETCH_ASSOC)) {
 				$retorno['id'] = $data['_id'];
-				$retorno['lpm'] = $data['lpm'];
+				$retorno['vu'] = $data['vu'];
 				$retorno['mpm'] = $data['mpm'];
 
 				$retorno['result'] = true;
