@@ -18,7 +18,7 @@
 
 			<fieldset id="retorno">
 				<div id="_id"><p></p></div>
-				<label for="vu">Litros por Minuto:</label>
+				<label for="vu">Valor Umidade no Solo:</label>
 				<div id="vu"><p></p></div>
 
 				<label for="mpm">Média por Minuto:</label>
