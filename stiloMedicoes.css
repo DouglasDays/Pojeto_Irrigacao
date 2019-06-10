@@ -1,0 +1,53 @@
+@charset "UTF-8";
+
+body {
+	background-color: rgb(215, 255, 194);
+}
+
+div#interface {
+	width: 900px;
+	background-color: rgb(236, 255, 230);
+	margin: 100px auto auto auto;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, .5);
+	padding: 10px;
+	font-size: 16pt;
+	/*background: url("logo_irr1.png") no-repeat 95% 95%;*/
+}
+
+div#interface p, a {
+	text-decoration: none;
+	color: #000;
+}
+
+div#resultado {
+	width: 100%;
+	text-align: center;
+}
+
+
+header#cabecalho img#icone {
+	/* Tamanho que imagem ocupa na tela */
+	position: relative;
+	width: 30%;
+	height: 30%;
+	margin: 10px auto auto 320px;
+}
+
+header#cabecalho h1 {
+	font-family: 'Agency FB', sans-serif;
+	font-size: 40pt;
+	color: rgb(35, 51, 35);
+	padding-left: 350px;
+}
+
+section#corpo {
+	padding-bottom: 10px;
+}
+
+footer#rodape {
+	border-top: 1px #606060 solid;
+}
+
+footer#rodape p {
+	text-align: center;
+}
