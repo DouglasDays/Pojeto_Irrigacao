@@ -5,8 +5,6 @@
 	$vu = $_GET['vu'];
 	$mpm = $_GET['mpm'];
 
-	echo $vu;
-
 	#Cria uma query para inserir os dados no banco
 	$SQL = "INSERT INTO medicao (vu, mpm) VALUES (:V, :M)";
 
