@@ -7,7 +7,9 @@
 	//Prepara a query para ser executada
 	$st = $conexao->prepare($SQL);
 
-	if ($st->execute()) {
-		echo "dados deletados!";
-	} else echo "erro na query";
+	try {
+		$st->execute();
+	} catch (Exception $e) {
+		echo $e;
+	}
 ?>
