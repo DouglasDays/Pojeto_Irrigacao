@@ -7,7 +7,7 @@
 	$SQL = "SELECT _id FROM medicao ORDER BY _id DESC LIMIT 5";
 
 	try {
-		$st = $conexao->execute($SQL);
+		$st->execute($SQL);
 		while ($data = $st->fetch(PDO::FETCH_ASSOC)) {
 			array_push($registros, $data['_id']);
 		}
