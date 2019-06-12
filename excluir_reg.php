@@ -10,6 +10,6 @@
 	try {
 		$st->execute();
 	} catch (Exception $e) {
-		echo $e;
+		echo "$e";
 	}
 ?>
