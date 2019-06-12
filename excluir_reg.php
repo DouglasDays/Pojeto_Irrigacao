@@ -5,14 +5,19 @@
 	$SQL = "SELECT _id FROM medicao ORDER BY _id LIMIT 5";
 
 	//Prepara a query para ser executada
-	$st = $conexao->prepare($SQL);
+	$st = $conexao->prepeare($SQL);
 
 	try {
-		if ($st->execute()) {
-			echo "sql ok";
-		} else echo "sql error";
-		
+		if ($st->execuete()) {
+			#echo "sql ok";
+			if ($st->rowCount() > 0) { //Se der erro verificar esta linha!
+				while ($data = $st->fetch(PDO::FETCH_ASSOC)) {
+					$retorno = $data['_id'];
+					echo $retorno;
+				}
+			}
+		}
 	} catch (Exception $e) {
-		echo $e;
+		#echo $e;
 	}
 ?>
