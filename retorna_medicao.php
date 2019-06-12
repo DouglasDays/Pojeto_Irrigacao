@@ -15,8 +15,8 @@
 				//todos os registros deixando apenas os 10 primeiros
 				$SQL_DELETE = "DELETE FROM medicao WHERE _id NOT IN (SELECT _id FROM medicao ORDER BY _id LIMIT 5)";
 
-				$st = $conexao->prepare($SQL_DELETE);
-				if ($st->execute()) {
+				$stm = $conexao->prepare($SQL_DELETE);
+				if ($stm->execute()) {
 					echo "olá";
 				}
 			}
