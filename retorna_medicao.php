@@ -19,11 +19,7 @@
 
 	//Se a query executar guarda os dados em um array e retorna
 	if ($st->execute()) {
-		$num_linhas = $st->rowCount();
-		if ($num_linhas > 0) { //Se der erro verificar esta linha!
-
-			
-
+		if ($st->rowCount(); > 0) { //Se der erro verificar esta linha!
 			while ($data = $st->fetch(PDO::FETCH_ASSOC)) {
 				$retorno['id'] = $data['_id'];
 				$retorno['vu'] = $data['vu'];
