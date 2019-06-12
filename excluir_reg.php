@@ -8,7 +8,7 @@
 	$st = $conexao->prepare($SQL);
 
 	try {
-		if ($st->execuete()) {
+		if ($st->execute()) {
 			#echo "sql ok";
 			if ($st->rowCount() > 0) { //Se der erro verificar esta linha!
 				while ($data = $st->fetch(PDO::FETCH_ASSOC)) {
