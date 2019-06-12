@@ -9,11 +9,13 @@
 	$st = $conexao->prepare($SQL);
 
 	try {
-		$st->execute($SQL);
-		while ($data = $st->fetchALL(PDO::FETCH_ASSOC)) {
-			array_push($registros, $data['_id']);
-		}
-		echo "<pre>",print_r($registros);
+		if ($st->execute($SQL);) {
+			
+			while ($data = $st->fetchALL(PDO::FETCH_ASSOC)) {
+				array_push($registros, $data['_id']);
+			}
+			echo "<pre>",print_r($registros);
+			}
 	} catch (PDOexception $e) {
 		echo "Erro: <code>".$e->getMessage()."</code><br/>";
 		echo "algum erro ocorreu!";
