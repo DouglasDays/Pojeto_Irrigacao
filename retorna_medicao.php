@@ -12,7 +12,7 @@
 
 	if ($st->execute()) {
 		echo "dados deletados!";
-	}
+	} else echo "erro na query";
 
 	//Prepara a query para ser executada
 	$st = $conexao->prepare($SQL);
