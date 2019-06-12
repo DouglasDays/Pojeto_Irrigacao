@@ -1,16 +1,6 @@
 <?php
 	include 'conexao.php';
 
-	//Deleta todos os dados da tabela deixando apenas os 5 primeiros
-	$SQL_DELETE = "DELETE FROM medicao WHERE _id IN (SELECT _id FROM medicao ORDER BY _id LIMIT 5)";
-
-	//Prepara a query para ser executada
-	$st = $conexao->prepare($SQL_DELETE);
-
-	if ($st->execute()) {
-		echo "dados deletados!";
-	} else echo "erro na query";
-
 	//Define query que busca dados pelo _id e sendo o ultimo registro
 	$SQL = "SELECT * FROM medicao ORDER BY _id DESC LIMIT 1";
 
