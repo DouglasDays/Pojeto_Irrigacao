@@ -10,7 +10,7 @@
 
 	try {
 		$st->execute($SQL);
-		while ($data = $st->fetch(PDO::FETCH_ASSOC)) {
+		while ($data = $st->fetchALL(PDO::FETCH_ASSOC)) {
 			array_push($registros, $data['_id']);
 		}
 		echo "<pre>",print_r($registros);
