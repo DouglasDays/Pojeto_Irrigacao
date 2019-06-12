@@ -8,9 +8,9 @@
 	$st = $conexao->prepare($SQL);
 
 	try {
-		if ($st->execute();) {
-			echo "insert ok";
-		} else echo "insert error";
+		if ($st->execute()) {
+			echo "sql ok";
+		} else echo "sql error";
 		
 	} catch (Exception $e) {
 		echo $e;
