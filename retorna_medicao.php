@@ -15,6 +15,7 @@
 			$SQL_DELETE = "DELETE FROM medicao WHERE _id NOT IN (SELECT _id FROM medicao ORDER BY _id LIMIT 5)";
 
 			$stm = $conexao->prepare($SQL_DELETE);
+			
 			if ($stm->execute()) {
 				echo "olá";
 			}
