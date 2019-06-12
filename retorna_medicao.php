@@ -12,14 +12,11 @@
 		$num_linhas = $st->rowCount();
 		if ($num_linhas > 0) { //Se der erro verificar esta linha!
 
-			if ($num_linhas > 5) { //Se houver mais de 10 registros na tabela deleta 
-				//todos os registros deixando apenas os 10 primeiros
-				$SQL_DELETE = "DELETE FROM medicao WHERE _id NOT IN (SELECT _id FROM medicao ORDER BY _id LIMIT 5)";
+			$SQL_DELETE = "DELETE FROM medicao WHERE _id NOT IN (SELECT _id FROM medicao ORDER BY _id LIMIT 5)";
 
-				$stm = $conexao->prepare($SQL_DELETE);
-				if ($stm->execute()) {
-					echo "olá";
-				}
+			$stm = $conexao->prepare($SQL_DELETE);
+			if ($stm->execute()) {
+				echo "olá";
 			}
 
 			while ($data = $st->fetch(PDO::FETCH_ASSOC)) {
