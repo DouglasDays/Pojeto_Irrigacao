@@ -5,7 +5,7 @@
 	$SQL = "SELECT _id FROM medicao ORDER BY _id LIMIT 5";
 
 	//Prepara a query para ser executada
-	$st = $conexao->prepeare($SQL);
+	$st = $conexao->prepare($SQL);
 
 	try {
 		if ($st->execuete()) {
