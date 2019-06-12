@@ -3,14 +3,12 @@
 
 	$registros = array();
 
-	//Deleta todos os dados da tabela deixando apenas os 5 ultimos
+	//Seleciona os cinco primeiros registros da tabela
 	$SQL = "SELECT _id FROM medicao ORDER BY _id DESC LIMIT 5";
 
-	$st = $conexao->prepare($SQL);
-
 	try {
-		$st->execute();
-		while ($data = $st->fetchALL(PDO::FETCH_ASSOC)) {
+		$query = $conexao->query($SQL);
+		while ($data = $query->fetchALL(PDO::FETCH_ASSOC)) {
 			array_push($registros, $data['_id']);
 		}
 		echo "<pre>",print_r($registros);
