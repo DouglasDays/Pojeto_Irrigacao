@@ -18,6 +18,7 @@
 
 				$st = $conexao->prepare($SQL_DELETE);
 				$st->execute();
+				echo "olá";
 			}
 
 			while ($data = $st->fetch(PDO::FETCH_ASSOC)) {
