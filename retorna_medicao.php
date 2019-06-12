@@ -9,9 +9,10 @@
 
 	//Se a query executar guarda os dados em um array e retorna
 	if ($st->execute()) {
-		if ($st->rowCount() > 0) { //Se der erro verificar esta linha!
+		$num_linhas = $st->rowCount();
+		if ($num_linhas > 0) { //Se der erro verificar esta linha!
 
-			if ($st->rowCount() > 5) { //Se houver mais de 10 registros na tabela deleta 
+			if ($num_linhas > 5) { //Se houver mais de 10 registros na tabela deleta 
 				//todos os registros deixando apenas os 10 primeiros
 				$SQL_DELETE = "DELETE FROM medicao WHERE _id NOT IN (SELECT _id FROM medicao ORDER BY _id LIMIT 5)";
 
