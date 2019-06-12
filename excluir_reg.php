@@ -6,6 +6,8 @@
 	//Deleta todos os dados da tabela deixando apenas os 5 ultimos
 	$SQL = "SELECT _id FROM medicao ORDER BY _id DESC LIMIT 5";
 
+	$st = $conexao->prepare($SQL);
+
 	try {
 		$st->execute($SQL);
 		while ($data = $st->fetch(PDO::FETCH_ASSOC)) {
