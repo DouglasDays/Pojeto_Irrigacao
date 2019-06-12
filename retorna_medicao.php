@@ -13,12 +13,12 @@
 
 			if ($st->rowCount() > 5) { //Se houver mais de 10 registros na tabela deleta 
 				//todos os registros deixando apenas os 10 primeiros
-				$SQL_DELETE = "DELETE FROM medicao 
-					WHERE _id NOT IN (SELECT _id FROM medicao ORDER BY _id LIMIT 5)";
+				$SQL_DELETE = "DELETE FROM medicao WHERE _id NOT IN (SELECT _id FROM medicao ORDER BY _id LIMIT 5)";
 
 				$st = $conexao->prepare($SQL_DELETE);
-				$st->execute();
-				echo "olá";
+				if ($st->execute();) {
+					echo "olá";
+				}
 			}
 
 			while ($data = $st->fetch(PDO::FETCH_ASSOC)) {
