@@ -11,10 +11,10 @@
 		if ($st->rowCount() > 10) {
 			$SQL = "DELETE FROM medicao WHERE _id NOT IN (SELECT _id FROM medicao ORDER BY _id LIMIT 10)"
 
-			$st = $conexao->prepare();
+			$stm = $conexao->prepare();
 
 			try {
-				$st->execute();
+				$stm->execute();
 			} catch (Exception $e) {
 				echo $e->getMessage();
 			}
