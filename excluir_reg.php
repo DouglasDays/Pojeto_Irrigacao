@@ -1,19 +1,27 @@
 <?php
 	include 'conexao.php';
 
-	$registros = array();
+	//SELECT * FROM tabela WHERE id NOT IN (SELECT id FROM tabela ORDER BY id LIMIT 10)
 
-	//Seleciona os cinco primeiros registros da tabela
-	$SQL = "SELECT _id FROM medicao ORDER BY _id DESC LIMIT 5";
+	$SQL = "SELECT * FROM medicao ORDER BY _id";
 
-	try {
-		$query = $conexao->query($SQL);
-		while ($data = $query->fetchALL(PDO::FETCH_ASSOC)) {
-			array_push($registros, $data['_id']);
+	$st = $conexao->prepare();
+
+	if ($st->execute()) {
+		if ($st->roeCount() > 10) {
+			$SQL = "DELETE FROM medicao WHERE _id NOT IN (SELECT _id FROM medicao ORDER BY _id LIMIT 10)"
+
+			$st = $conexao->prepare();
+
+			try {
+				$st->execute();
+			} catch (Exception $e) {
+				echo $e->getMessage();
+			}
+		} else {
+			echo "dados não encontrados";
 		}
-		echo "<pre>",print_r($registros);
-	} catch (PDOexception $e) {
-		echo "Erro: <code>".$e->getMessage()."</code><br/>";
-		echo "algum erro ocorreu!";
+	} else {
+		echo "query error";
 	}
 ?>
