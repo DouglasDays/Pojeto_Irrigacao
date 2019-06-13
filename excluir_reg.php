@@ -9,16 +9,15 @@
 	if ($st->execute()) {
 		if($st->rowCount() > 0) { //Verifica se o select retornou alguma linha
 
-			$SQL = "DELETE FROM medicao WHERE _id NOT IN ("; //deleta os dados que não sejam aqueles retornados
-
 			while ($dados[] = $st->fetch(PDO::FETCH_ASSOC)) { //guarda os dados da query
 				for ($i=0; $i < 10; $i++) { 
-					$retorno = $dados['_id'];
-					$SQL .= settype($retorno, "string").", ";
+					$retorno = $dados;
+					settype($retorno, "string");
+					$SQL .= $retorno.", ";
 				}
 			}
 
-			$SQL .= ")";
+			$SQL = "DELETE FROM medicao WHERE _id NOT IN ("; //deleta os dados que não sejam aqueles retornados
 
 			var_dump($SQL);
 
