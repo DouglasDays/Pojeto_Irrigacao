@@ -5,10 +5,10 @@
 
 	$SQL = "DELETE FROM medicao WHERE _id NOT IN (SELECT _id FROM medicao ORDER BY _id LIMIT 10)"
 
-	$stm = $conexao->prepare();
+	$st = $conexao->prepare();
 
 	try {
-		$stm->execute();
+		$st->execute();
 	} catch (Exception $e) {
 		echo $e->getMessage();
 	}
