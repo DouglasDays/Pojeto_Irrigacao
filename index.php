@@ -36,12 +36,12 @@
 	</div>
 
 	<script>
-		$("form").submit(function(event){
+		$("form").submit(function(event){ //verifica evento do formulário
 
-			$.ajax({
-				url: "formulario_login.php",
-				type: 'post',
-				data: {
+			$.ajax({ //função manda os dados para a página onde os dados serão tratados
+				url: "formulario_login.php", //página onde os dados serão tratados
+				type: 'post', //tipo de dado que é esperado como retorno
+				data: { //dados que serão mandados
 					nome: $("#nome").val(),
 					senha: $("#senha").val()
 				},
@@ -49,17 +49,21 @@
 					$("#resultado").html("Verificando...");
 				}
 			})
-			.done(function(msg){
-				$("#resultado").html(msg);
+			.done(function(msg){ //se retornar dados escreve retorno no objeto com id resultado
 				setTimeout(function() {
-					window.location = "medicoes.php";
+					if (msg == "Usuário inválido!") {
+						$("#resultado").html(msg);
+					} else {
+						$("#resultado").html(msg);
+						window.location = "medicoes.php";
+					}
 				}, 3000);
 			})
-			.fail(function(jqXHR, textStatus, msg){
+			.fail(function(jqXHR, textStatus, msg){ //se falhar mostra o erro na tela
 				alert(msg);
 			});
 
-			event.preventDefault();
+			event.preventDefault(); //previne que a página carregue
 		});
 	</script>
 </body>
