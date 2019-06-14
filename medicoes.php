@@ -18,11 +18,15 @@
 
 			<fieldset id="retorno">
 				<div id="_id"><p></p></div>
-				<label for="vu">Litros por Minuto:</label>
+
+				<label for="vu">Valor Umidade do Solo:</label>
 				<div id="vu"><p></p></div>
 
-				<label for="mpm">Média por Minuto:</label>
+				<label for="mpm">Média de Litros p/ Minuto:</label>
 				<div id="mpm"><p></p></div>
+
+				<label for="macm">Média de Litros Acumulada:</label>
+				<div id="macm"><p></p></div>
 			</fieldset>
 		</section>
 
