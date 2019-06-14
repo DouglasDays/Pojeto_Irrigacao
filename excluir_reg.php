@@ -1,25 +1,9 @@
 <?php
 	include 'conexao.php';
 
-	//SELECT * FROM tabela WHERE id NOT IN (SELECT id FROM tabela ORDER BY id LIMIT 10)
-
-	/*$pessoa = array();
-	$sql='SELECT nomes FROM usuarios';
-							
- 	try{
-     	$query = $conecta->query($sql); // Pra selects use direto query não precisa preparar antes
-     	while($ln = $query->fetchAll(PDO::FETCH_ASSOC)):
-        	array_push($pessoas, $ln['nome']);
-     	endwhile;
-     	echo '<pre>', print_r($pessoas);
-    }catch(PDOexception $e){
-        echo "Erro: <code>".$e->getMessage()."</code><br />"; // Procure exibir o erro pra poder corrigir
-        echo 'Não deu';
-	}*/
-
 	$retorno = array();
 
-	$SQL = "SELECT _id FROM medicao ORDER BY _id DESC LIMIT 10";
+	$SQL = "SELECT _id FROM medicao ORDER BY _id DESC LIMIT 10"; //retorna os dez ultimos registros da tabela
 
 	$st = $conexao->prepare($SQL);
 
@@ -30,25 +14,24 @@
 				array_push($retorno, $value['_id']);
 			}
 
-			print_r($retorno);
+			//print_r($retorno);
 			
-			$SQL = "DELETE FROM medicao WHERE _id NOT IN (:R)"; //deleta os dados que não sejam aqueles retornados
+			$SQL = "DELETE FROM medicao WHERE _id NOT IN ($retorno[0], $retorno[1], $retorno[2], $retorno[3], $retorno[4],
+				$retorno[5], $retorno[6], $retorno[7], $retorno[8], $retorno[9])"; //deleta os dados que não sejam aqueles retornados
 
-			$st->bindParam(":R", $retorno);
-
-			var_dump($SQL);
+			//var_dump($SQL);
 
 			$st = $conexao->prepare($SQL);
 
 			if ($st->execute()) {
-				echo "dados deletados!";
+				//echo "dados deletados!";
 			} else {
-				echo "ocorreu um erro!";
+				//echo "ocorreu um erro!";
 			}
 		} else {
-			echo "dados não encontrados!";
+			//echo "dados não encontrados!";
 		}
 	} else {
-		echo "query error!";
+		//echo "query error!";
 	}
 ?>

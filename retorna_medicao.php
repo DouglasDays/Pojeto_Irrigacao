@@ -1,6 +1,8 @@
 <?php
 	include 'conexao.php';
 
+	include 'excluir_reg.php';
+
 	//Define query que busca dados pelo _id e sendo o ultimo registro
 	$SQL = "SELECT * FROM medicao ORDER BY _id DESC LIMIT 1";
 
