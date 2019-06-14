@@ -55,6 +55,7 @@
 					$("#_id").html(dataServer.id);
 					$("#vu").html(dataServer.vu);
 					$("#mpm").html(dataServer.mpm);
+					$("#macm").html(dataServer.macm);
 				} else {
 					$("#resultado").html("Ocorreu um erro ao carregar medições!");
 				}

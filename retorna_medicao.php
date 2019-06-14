@@ -16,6 +16,7 @@
 				$retorno['id'] = $data['_id'];
 				$retorno['vu'] = $data['vu'];
 				$retorno['mpm'] = $data['mpm'];
+				$retorno['macm'] = $data['macm'];
 
 				$retorno['result'] = true;
 			}
