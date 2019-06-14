@@ -6,7 +6,7 @@
 	$senha = $_POST["senha"];
 
 	#Executa uma query com base nos valores da variáveis
-	$SQL = "SELECT nome, senha FROM user WHERE nome=':N' AND senha=':S'";
+	$SQL = "SELECT nome, senha FROM user WHERE nome=:N AND senha=:S";
 
 	$st = $conexao->prepare($SQL);
 
