@@ -17,17 +17,21 @@
         echo 'Não deu';
 	}*/
 
+	$retorno = array();
+
 	$SQL = "SELECT _id FROM medicao ORDER BY _id DESC LIMIT 10";
 
 	$st = $conexao->prepare($SQL);
 
 	if ($st->execute()) {
 		if($st->rowCount() > 0) { //Verifica se o select retornou alguma linha
-
-			while ($data = $st->fetchAll(PDO::FETCH_ASSOC)) { //guarda os dados da query 
-				array_push($retorno, $data['_id']);
+			$data = $st->fetchAll(PDO::FETCH_ASSOC); //retorna um array com os resultados do campo _id
+			foreach ($data as $value) { //percorre o vetor e guarda os dados em $retorno
+				array_push($retorno, $value['_id']);
 			}
 
+			print_r($retorno);
+			
 			$SQL = "DELETE FROM medicao WHERE _id NOT IN (:R)"; //deleta os dados que não sejam aqueles retornados
 
 			$st->bindParam(":R", $retorno);
