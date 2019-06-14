@@ -51,7 +51,7 @@
 			})
 			.done(function(msg){ //se retornar dados escreve retorno no objeto com id resultado
 				setTimeout(function() {
-					if (msg == "Usuário inválido!") {
+					if (msg === "Usuário inválido!") {
 						$("#resultado").html(msg);
 					} else {
 						$("#resultado").html(msg);
