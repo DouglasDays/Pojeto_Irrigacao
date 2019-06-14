@@ -26,7 +26,7 @@
 	if ($st->execute()) {
 		if($st->rowCount() > 0) { //Verifica se o select retornou alguma linha
 			$data = $st->fetchAll(PDO::FETCH_ASSOC); //retorna um array com os resultados do campo _id
-			foreach ($data as $value) { //percorre o vetor e guarda os dados em $retorno
+			foreach ($data as $value) { //percorre o vetor e guarda os valores de $data em $retorno
 				array_push($retorno, $value['_id']);
 			}
 
