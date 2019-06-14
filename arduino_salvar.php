@@ -2,8 +2,8 @@
 	include 'conexao.php';
 
 	#Pegas os dados provenientes do arduino
-	$vu = $_GET['vu'];
-	$mpm = $_GET['mpm'];
+	$vu = $_GET['v'];
+	$mpm = $_GET['m'];
 
 	#Cria uma query para inserir os dados no banco
 	$SQL = "INSERT INTO medicao (vu, mpm) VALUES (:V, :M)";
